@@ -1,9 +1,10 @@
 from flask import Flask
+from flask import render_template
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return 'Where can I go for lunch today?'
+def index(title='Where will I have lunch today?'):
+    return render_template('base.html', title=title)
 
 @app.route('/about')
 def about():
