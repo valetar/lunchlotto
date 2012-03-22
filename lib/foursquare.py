@@ -34,7 +34,7 @@ class FoursquareAuth(object):
     """foursquare OAuth authentication
     
     """
-    def __init__(self, client_id, client_secret, redirect_uri, access_token=None):
+    def __init__(self, client_id, client_secret, redirect_uri=None, access_token=None):
         self.client_id = client_id
         self.client_secret = client_secret
         self.redirect_uri = redirect_uri
