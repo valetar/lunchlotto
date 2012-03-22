@@ -22,12 +22,12 @@
 	<body>
 		<div class="wrap">
 			<header>
-				<h1>{{ title }}</h1>
+				<h1>Where can I go for lunch today?</h1>
 			</header>
-
+            {{ venues }}
 			<div role="main">
 				{% block content %}
-				<form class="form" action="#" method="get">
+				<form class="form" action="#" method="post">
 					<div class="floatleft">
 						<label class="label" for="lat">Latitide</label>
 						<input class="text" id="lat" name="lat" val="">
