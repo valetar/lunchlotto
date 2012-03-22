@@ -8,8 +8,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<title>{{ title }}</title>
-		<meta name="description" content="">
-		<meta name="author" content="">
+		<meta name="description" content="{{ title }}">
+		<meta name="author" content="https://github.com/valetar">
 
 		<meta name="viewport" content="width=device-width">
 
@@ -19,17 +19,37 @@
 	</head>
 	
 	<body>
-		<header>
-			<h1>{{ title }}</h1>
-		</header>
+		<div class="wrap">
+			<header>
+				<h1>{{ title }}</h1>
+			</header>
 
-		<div role="main">
+			<div role="main">
+				{% block content %}
+				<form class="form" action="#" method="get">
+					<div class="floatleft">
+						<label class="label" for="lat">Latitide</label>
+						<input class="text" id="lat" name="lat" val="">
+					</div>
 
+					<div class="floatleft">
+						<label class="label" for="lon">Longitude</label>
+						<input class="text" id="lon" name="lon" val="">
+					</div>
+
+					<div class="floatleft">
+						<label class="label">&nbsp;</label>
+						<input class="submit" type="submit" value="Take me to lunch!">
+					</div><div class="clearfix"></div>
+				</form>
+				<div id="map_canvas" class="map"></div>
+				{% endblock %}
+			</div>
+
+			<footer>
+
+			</footer>
 		</div>
-		
-		<footer>
-
-		</footer>
 
 		<script>
 		var plugins = '{{ url_for('static', filename='js/plugins.js') }}';

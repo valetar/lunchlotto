@@ -73,14 +73,26 @@ td { vertical-align: top; }
 /* ===== Primary Styles ========================================================
    Author:
    ========================================================================== */
+html,body{color:#666;font-size:11px;height:100%;line-height:1.3em;margin:0;padding:0;width:100%;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;margin:0;}
+input,button,textarea,select{font-size:100%;color:#696969;}
+::-webkit-input-placeholder{color:#ccc !important;}
+:-moz-placeholder{color:#ccc !important;}
+:-ms-input-placeholder{color:#ccc !important;}
+.placeholder{color:#ccc !important;}
+a{color:#696969;text-decoration:none;}
+a:hover{color:#ff99b1;text-decoration:underline;}
+h1{font-size:18px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
+.wrap{box-shadow:0 1px 5px rgba(100,100,100,0.75);margin:30px auto;padding:10px;width:950px;}
+.map{height:500px;width:950px;}
 
-
-
-
-
-
-
-
+/* =============================================================================
+   Form
+   ========================================================================== */
+.form{margin:0 0 15px;}
+.label{display:block;margin:0 0 3px;}
+.text{width:350px;margin:0 20px 0 0;}
+.submit{background:#333;border:0 none;border-radius:5px;color:#fff;font-weight:bold;height:20px;line-height:20px;margin:0;padding:0 10px;}
 
 
 
@@ -105,6 +117,8 @@ td { vertical-align: top; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
+.floatleft{float:left;}
+.floatright{float:right;}
 
 /* =============================================================================
    Print Styles
