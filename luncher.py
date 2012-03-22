@@ -17,6 +17,8 @@ def index():
     foursq=Foursquare(auth)
     venues=None
     error=None
+    lat=''
+    lon=''
     if request.method == 'POST':
         lat=request.form.get('lat', '')
         lon=request.form.get('lon', '')
@@ -35,7 +37,8 @@ def index():
             venues=res['response']['venues']
         except Exception, e:
             error='Connection error - %s ' % e
-    return render_template('base.html', venues=venues, error=error)
+    title='Where can I go for lunch today? | lunchlotto'
+    return render_template('base.html', venues=venues, error=error, lat=lat, lon=lon, title=title)
                                               
 @app.route('/about')
 def about():

@@ -83,15 +83,19 @@ input,button,textarea,select{font-size:100%;color:#696969;}
 a{color:#696969;text-decoration:none;}
 a:hover{color:#ff99b1;text-decoration:underline;}
 h1{font-size:18px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
+h2{font-size:18px;8line-height:1.3em;margin:0 0 0.5em;}
+h3{font-size:13px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
 .wrap{box-shadow:0 1px 5px rgba(100,100,100,0.75);margin:30px auto;padding:10px;width:950px;}
-.map{height:500px;width:950px;}
+.map{height:500px;margin:0 0 20px;width:950px;}
+.icon{margin:0 20px 0 0;}
 
 /* =============================================================================
    Form
    ========================================================================== */
 .form{margin:0 0 15px;}
 .label{display:block;margin:0 0 3px;}
-.text{width:350px;margin:0 20px 0 0;}
+.text{width:300px;margin:0 20px 0 0;}
+.small{width:100px;}
 .submit{background:#333;border:0 none;border-radius:5px;color:#fff;font-weight:bold;height:20px;line-height:20px;margin:0;padding:0 10px;}
 
 
@@ -101,7 +105,7 @@ h1{font-size:18px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
+  /* Style adjustments for viewports that meet the condition */
 }
 
 /* =============================================================================
@@ -139,9 +143,16 @@ h1{font-size:18px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
   h2, h3 { page-break-after: avoid; }
 }
 
+
 /* =============================================================================
    edelight widget Styles
    ========================================================================== */
-.ed_widget_legal {clear: both;} 
-.ed_widget_item { float:left; padding-right: 20px; }
-.ed_widget_clear{clear:both; }
+.ed_widget_item{float:left;margin:0 10px 0 0;text-align:center;width:180px;}
+.ed_widget_image_link{margin:0 0 5px;}
+.ed_widget_item_info{display:block;}
+.ed_widget_item_brand{display:block;font-weight:bold;height:15px;overflow:hidden;}
+.ed_widget_item_title{display:block;height:15px;overflow:hidden;}
+.ed_widget_item_price{float:left;font-weight:bold;}
+.ed_widget_shop_link{float:right;}
+.ed_widget_shipping_cost{clear:both;display:block;text-align:left;width:180px;}
+.ed_widget_legal{clear:both;padding:0 0 20px;}
