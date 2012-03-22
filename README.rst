@@ -20,4 +20,4 @@ Lunchlotto will suggest you a single spot near you current
 location and the discussion is over. Stick to the plan!
 
 
-;-) 
+;-)
