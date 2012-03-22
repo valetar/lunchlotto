@@ -138,3 +138,10 @@ h1{font-size:18px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+/* =============================================================================
+   edelight widget Styles
+   ========================================================================== */
+.ed_widget_legal {clear: both;} 
+.ed_widget_item { float:left; padding-right: 20px; }
+.ed_widget_clear{clear:both; }

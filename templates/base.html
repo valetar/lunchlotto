@@ -7,8 +7,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>{{ title }}</title>
-		<meta name="description" content="{{ title }}">
+		<title>Where can I go for lunch today?</title>
+		<meta name="description" content="Where can I go for lunch today?">
 		<meta name="author" content="https://github.com/valetar">
 
 		<meta name="viewport" content="width=device-width">
@@ -45,15 +45,25 @@
 				<div id="map_canvas" class="map"></div>
 				{% endblock %}
 			</div>
-
+			<h1>Forget lunch! I wanna go shopping!</h1>
+            <div class=td_widget>
+                {% block td_widget %}
+                <div class="ed_product_widget" id="4f6b5ddcfcab25f32c000000" data-accesskey="80b02604c7dc26fa6957ca6ee7ab505c" data-imagesize="100" data-items="4" data-brand="" data-ecatn="" data-query="Lunch"></div>
+                {% endblock %}
+            </div>
 			<footer>
-
+                {% block footer %}
+                Build with Flask, Google Maps, Foursquare and some Sushi! <br>
+                Powered by edelight
+                {% endblock %}
 			</footer>
 		</div>
 
+        <script type="text/javascript" src="http://ewig.edelight.biz/javascript/ed_product_widget.min.js"></script>
 		<script>
 		var plugins = '{{ url_for('static', filename='js/plugins.js') }}';
 		Modernizr.load({load: '{{ url_for('static', filename='js/script.js') }}'});
 		</script>
+		
 	</body>
 </html>
