@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>{{ title }}</title>
+		<title>{{ title }} - {{ sitename }}</title>
 		<meta name="description" content="{{ title }}">
 		<meta name="author" content="https://github.com/valetar">
 
@@ -22,7 +22,7 @@
 	<body>
 		<div class="wrap">
 			<header>
-				<h1>{{ title }}</h1>
+				<h1><span class="bigger">{{ sitename }}</span> {{ title }}</h1>
 			</header>
 			<div role="main">
 				{% block content %}
@@ -52,7 +52,7 @@
 			</div>
 
 			<aside>
-				<h2>Forget lunch! I wanna go shopping!</h2>
+				<h2>Forget about lunch! I wanna go shopping!</h2>
 	            {% block td_widget %}
 	            <div class="ed_product_widget" id="4f6b5ddcfcab25f32c000000" data-accesskey="80b02604c7dc26fa6957ca6ee7ab505c" data-imagesize="170" data-items="5" data-brand="" data-ecatn="" data-query="Lunch"></div>
 	            {% endblock %}
@@ -82,7 +82,7 @@
 				'city': '{{ venue.location.postalCode }} {{ venue.location.city }}',
 				'phone': '{{ venue.contact.formattedPhone }}',
 				'icon': '{{ venue.categories[0].icon.prefix }}32{{ venue.categories[0].icon.name }}',
-				'iconlarge': '{{ venue.categories[0].icon.prefix }}88{{ venue.categories[0].icon.name }}',
+				'iconlarge': '{{ venue.categories[0].icon.prefix }}64{{ venue.categories[0].icon.name }}',
 			});
 			{% endfor %}
 		{% endif %}

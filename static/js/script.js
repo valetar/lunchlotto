@@ -128,13 +128,12 @@ lunchlotto = {
 					venues[i].setVisible(false);
     			}
 
-	    		for (i in venues) {
-	    			var rand = Math.ceil(Math.random() * venues.length -1);
-	    			venues[rand].setVisible(true);
-	    			return;
-	    		}
-	    			
+	    		lunchlotto.google.showrandomvenue();
 			}
+		},
+		showrandomvenue: function() {
+			var rand = Math.ceil(Math.random() * venues.length -1);
+			venues[rand].setVisible(true);
 		},
 		createvenue: function(object,location,content) {
 			var venue = new google.maps.Marker({

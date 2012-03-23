@@ -73,18 +73,30 @@ td { vertical-align: top; }
 /* ===== Primary Styles ========================================================
    Author:
    ========================================================================== */
-html,body{color:#666;font-size:11px;height:100%;line-height:1.3em;margin:0;padding:0;width:100%;}
+@font-face {
+    font-family: 'PincoyablackBlack';
+    src: url('pincoyablack-webfont.eot');
+    src: url('pincoyablack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('pincoyablack-webfont.woff') format('woff'),
+         url('pincoyablack-webfont.ttf') format('truetype'),
+         url('pincoyablack-webfont.svg#PincoyablackBlack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html,body{color:#444;font-size:11px;height:100%;line-height:1.3em;margin:0;padding:0;width:100%;}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;margin:0;}
-input,button,textarea,select{font-size:100%;color:#696969;}
+input,button,textarea,select{font-size:100%;color:#444;}
 ::-webkit-input-placeholder{color:#ccc !important;}
 :-moz-placeholder{color:#ccc !important;}
 :-ms-input-placeholder{color:#ccc !important;}
 .placeholder{color:#ccc !important;}
 a{color:#696969;text-decoration:none;}
 a:hover{color:#ff99b1;text-decoration:underline;}
-h1{font-size:18px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
-h2{font-size:18px;8line-height:1.3em;margin:0 0 0.5em;}
-h3{font-size:13px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
+h1{font-family:'PincoyablackBlack';font-size:48px;line-height:1.3em;margin:0;}
+h2{font-family:'PincoyablackBlack';font-size:36px;line-height:1.3em;margin:0;}
+h3{font-size:13px;font-weight:bold;line-height:1.3em;margin:0;}
+.bigger{font-size:72px;}
 .wrap{box-shadow:0 1px 5px rgba(100,100,100,0.75);margin:30px auto;padding:10px;width:950px;}
 .map{height:500px;margin:0 0 20px;width:950px;}
 .icon{margin:0 20px 0 0;}

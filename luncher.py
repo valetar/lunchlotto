@@ -37,8 +37,9 @@ def index():
             venues=res['response']['venues']
         except Exception, e:
             error='Connection error - %s ' % e
-    title='Where can I go for lunch today? | lunchlotto'
-    return render_template('base.html', venues=venues, error=error, lat=lat, lon=lon, title=title)
+    title='Where can I go for lunch today?'
+    sitename='lunchlotto'
+    return render_template('base.html', venues=venues, error=error, lat=lat, lon=lon, title=title, sitename=sitename)
                                               
 @app.route('/about')
 def about():
