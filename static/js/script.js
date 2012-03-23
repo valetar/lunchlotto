@@ -119,7 +119,9 @@ lunchlotto = {
 			if (venuesArray) {
 			    for (i in venuesArray) {
 			    	var contentString = '<img src="' + venuesArray[i].iconlarge +'" class="icon floatleft">' + 
-			    						'<div class="floatleft"><h2>' + venuesArray[i].name + '</h2><h3>' + venuesArray[i].category + '</h3></div>';
+			    						'<div class="floatleft"><h2>' + venuesArray[i].name + '</h2><h3>' + venuesArray[i].category + '</h3>'+
+			    						'<p>' + venuesArray[i].street + '<br>'+ venuesArray[i].city +'<br>'+
+			    						'T: ' + venuesArray[i].phone +'</p></div>';
 			    	var location = new google.maps.LatLng(venuesArray[i].lat, venuesArray[i].lng);
 
 					venues.push(lunchlotto.google.createvenue(venuesArray[i],location,contentString));

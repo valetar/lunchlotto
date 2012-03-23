@@ -78,6 +78,9 @@
 				'lat': '{{ venue.location.lat }}',
 				'lng': '{{ venue.location.lng }}',
 				'category': '{{ venue.categories[0].name|e }}',
+				'street': '{{ venue.location.address }}',
+				'city': '{{ venue.location.postalCode }} {{ venue.location.city }}',
+				'phone': '{{ venue.contact.formattedPhone }}',
 				'icon': '{{ venue.categories[0].icon.prefix }}32{{ venue.categories[0].icon.name }}',
 				'iconlarge': '{{ venue.categories[0].icon.prefix }}88{{ venue.categories[0].icon.name }}',
 			});
