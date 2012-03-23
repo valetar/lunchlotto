@@ -147,12 +147,13 @@ h3{font-size:13px;font-weight:bold;line-height:1.3em;margin:0 0 0.5em;}
 /* =============================================================================
    edelight widget Styles
    ========================================================================== */
-.ed_widget_item{float:left;margin:0 10px 0 0;text-align:center;width:180px;}
-.ed_widget_image_link{margin:0 0 5px;}
+.ed_product_widget{height:275px;margin:0 0 20px;}
+.ed_widget_item{float:left;margin:0 10px 0 10px;text-align:center;width:170px;}
+.ed_widget_image_link{display:block;margin:0 0 5px;}
 .ed_widget_item_info{display:block;}
 .ed_widget_item_brand{display:block;font-weight:bold;height:15px;overflow:hidden;}
-.ed_widget_item_title{display:block;height:15px;overflow:hidden;}
-.ed_widget_item_price{float:left;font-weight:bold;}
-.ed_widget_shop_link{float:right;}
-.ed_widget_shipping_cost{clear:both;display:block;text-align:left;width:180px;}
-.ed_widget_legal{clear:both;padding:0 0 20px;}
+.ed_widget_item_title{display:block;font-size:13px;height:15px;overflow:hidden;text-transform:uppercase;}
+.ed_widget_item_price{display:block;font-size:13px;font-weight:bold;text-transform:uppercase;}
+.ed_widget_shop_link{background:#333;border-radius:5px;color:#fff;display:block;font-weight:bold;height:20px;line-height:20px;margin:5px auto 0;padding:0 10px;width:110px;}
+.ed_widget_shipping_cost{}
+.ed_widget_legal{clear:both;}

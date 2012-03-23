@@ -1,10 +1,11 @@
 var map;
 var initialLocation;
-var markers   = [];
-var venues    = [];
-var infowindows = [];
-var siberia   = new google.maps.LatLng(60, 105);
-var stuttgart = new google.maps.LatLng(48.77065656676112, 9.179780947082463);
+var markers     = [];
+var venues      = [];
+var siberia     = new google.maps.LatLng(60, 105);
+var stuttgart   = new google.maps.LatLng(48.77065656676112, 9.179780947082463);
+var infowindow  = new google.maps.InfoWindow();
+var bounds      = new google.maps.LatLngBounds();
 var browserSupportFlag =  new Boolean();
 
 lunchlotto = {
@@ -81,7 +82,7 @@ lunchlotto = {
 				$('#lon').val(lon);
 
 				lunchlotto.google.setmarker(initialLocation);
-				lunchlotto.google.addvenues();
+				lunchlotto.google.parsevenues();
 			}
 		},
 		nolocation: function(errorFlag) {
@@ -114,28 +115,15 @@ lunchlotto = {
     			}
 			}
 		},
-		addvenues: function() {
+		parsevenues: function() {
 			if (venuesArray) {
 			    for (i in venuesArray) {
 			    	var contentString = '<img src="' + venuesArray[i].iconlarge +'" class="icon floatleft">' + 
 			    						'<div class="floatleft"><h2>' + venuesArray[i].name + '</h2><h3>' + venuesArray[i].category + '</h3></div>';
-				    var infowindow = new google.maps.InfoWindow({
-				        content: contentString
-				    });
-
 			    	var location = new google.maps.LatLng(venuesArray[i].lat, venuesArray[i].lng);
-      				var venue = new google.maps.Marker({
-				    	position: location,
-				      	map: map,
-				      	title: venuesArray[i].name + ' - ' + venuesArray[i].category,
-				      	icon: venuesArray[i].icon,
-				  	});
-					venues.push(venue);
 
-					venue.setVisible(false);
-					/*google.maps.event.addListener(venue, 'click', function() {
-				      	infowindow.open(map,venue);
-				    });*/
+					venues.push(lunchlotto.google.createvenue(venuesArray[i],location,contentString));
+					venues[i].setVisible(false);
     			}
 
 	    		for (i in venues) {
@@ -145,6 +133,21 @@ lunchlotto = {
 	    		}
 	    			
 			}
+		},
+		createvenue: function(object,location,content) {
+			var venue = new google.maps.Marker({
+				position: location,
+				map: map,
+				title: object.name + ' - ' + object.category,
+				icon: object.icon,
+			});
+
+			google.maps.event.addListener(venue, 'click', function() {
+				infowindow.setContent(content);
+                infowindow.open(map,venue);
+			});
+
+			return venue;
 		}
 	}
 };
