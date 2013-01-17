@@ -105,8 +105,8 @@ lunchlotto = {
 			map.setZoom(15);
 		  	map.setCenter(location);
 
-		  	$('#lat').val(location.Ua);
-			$('#lon').val(location.Va);
+		  	$('#lat').val(location.Ya);
+			$('#lon').val(location.Za);
 		},
 		clearmarkers: function() {
 			if (markers) {
