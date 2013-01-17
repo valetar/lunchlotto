@@ -25,9 +25,9 @@ def index():
         radius=request.form.get('radius', 500)
         cid=request.form.get('cid', category_id)
         latlon='%s.%s,%s.%s' % (lat.split('.')[0],
-                                lat.split('.')[1][:2],
+                                lat.split('.')[1],
                                 lon.split('.')[0],
-                                lon.split('.')[1][:2],)
+                                lon.split('.')[1],)
         try:
             res=foursq.request('venues', 
                                 aspect='search', 
