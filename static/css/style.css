@@ -93,8 +93,8 @@ input,button,textarea,select{font-size:100%;color:#444;}
 .placeholder{color:#ccc !important;}
 a{color:#696969;text-decoration:none;}
 a:hover{color:#ff99b1;text-decoration:underline;}
-h1{font-family:'PincoyablackBlack';font-size:48px;line-height:1.3em;margin:0;}
-h2{font-family:'PincoyablackBlack';font-size:36px;line-height:1.3em;margin:0;}
+h1{font-family:'Georgia sans-serif';font-size:48px;line-height:1.3em;margin:0;}
+h2{font-family:'Georgia';font-size:36px;line-height:1.3em;margin:0;}
 h3{font-size:13px;font-weight:bold;line-height:1.3em;margin:0;}
 .bigger{font-size:72px;}
 .wrap{box-shadow:0 1px 5px rgba(100,100,100,0.75);margin:30px auto;padding:10px;width:950px;}
