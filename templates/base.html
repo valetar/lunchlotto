@@ -47,21 +47,23 @@
 						<input class="submit" type="submit" value="Ready for lunch!">
 					</div><div class="clearfix"></div>
 				</form>
+				<p>Pro Tip: Click on the map to change your location then hit 'Ready for Lunch' again!</p>
 				<div id="map_canvas" class="map"></div>
 				{% endblock %}
 			</div>
 
 			<aside>
-				<h2>Forget about lunch! I wanna go shopping!</h2>
+				<center><h2>Forget about lunch! I wanna go shopping!</h2></center>
+				<hr>
 	            {% block td_widget %}
-	            <div class="ed_product_widget" id="4f6b5ddcfcab25f32c000000" data-accesskey="80b02604c7dc26fa6957ca6ee7ab505c" data-imagesize="170" data-items="5" data-brand="" data-ecatn="" data-query="Lunch"></div>
+	            <div class="ed_product_widget" id="4f6b5ddcfcab25f32c000000" data-accesskey="0191f40a8e3da624a85c6a2a4096a1c0" data-imagesize="170" data-items="5" data-brand="" data-ecatn="" data-query="Lunch"></div>
 	            {% endblock %}
 	        </aside>
 
 			<footer>
                 {% block footer %}
-                Build with Flask, Google Maps, Foursquare and some Sushi!<br>
-                Powered by edelight
+                <hr>
+                Build as a <a href="http://labs.edelight-group.com/b/edelight-hackathon-1/">Hackday project</a> using Flask, Google Maps, Foursquare and some Sushi! Powered by <a href="http://www.edelight.de">edelight</a>
                 {% endblock %}
 			</footer>
 		</div>
